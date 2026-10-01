@@ -1,0 +1,24 @@
+import { createRoot } from 'react-dom/client';
+import './constants.jsx';
+import './helpers.jsx';
+import './mock-data.jsx';
+import './templates-view.jsx';
+import './sidebar.jsx';
+import './hour-grid-lines.jsx';
+import './shift-bar.jsx';
+import './detail-panel.jsx';
+import './unassigned-panel.jsx';
+import './gantt-row.jsx';
+import './main-gantt.jsx';
+import './nav.jsx';
+import './shared-page-wrapper.jsx';
+import './week-view.jsx';
+import './rounds-builder.jsx';
+import './unassigned-visits-page.jsx';
+import './roster-rules.jsx';
+import './service-colours.jsx';
+import './ecm-data.jsx';
+import './ecm-component.jsx';
+import { App } from './App.jsx';
+
+createRoot(document.getElementById('root')).render(<App />);

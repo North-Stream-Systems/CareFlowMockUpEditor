@@ -1,0 +1,25 @@
+{
+  "name": "careflow-prototype",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "vite build && node tools/snap.mjs dist .snap/current",
+    "snap:baseline": "vite build && node tools/snap.mjs dist .snap/baseline",
+    "snap:compare": "node tools/snap.mjs --compare .snap/baseline .snap/current"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.56.1",
+    "pngjs": "^7.0.0",
+    "vite": "^6.4.3"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

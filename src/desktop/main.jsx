@@ -1,0 +1,20 @@
+import { createRoot } from 'react-dom/client';
+import './constants.jsx';
+import './helpers.jsx';
+import './mock-data.jsx';
+import './reusables.jsx';
+import './widget-shell.jsx';
+import './dashboard-widgets.jsx';
+import './new-widgets.jsx';
+import './library.jsx';
+import './staff-profile-tabs.jsx';
+import './sidebar-configs.jsx';
+import './staff-sub-pages.jsx';
+import './staff-screen.jsx';
+import './dashboard-screen.jsx';
+import './messages-screen.jsx';
+import './coming-soon.jsx';
+import './nav.jsx';
+import { App } from './App.jsx';
+
+createRoot(document.getElementById('root')).render(<App />);
