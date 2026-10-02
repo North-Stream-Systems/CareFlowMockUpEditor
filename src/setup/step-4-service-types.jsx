@@ -13,7 +13,7 @@ export const Step4 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 4 of 8</div>
+        <div className="step-num">Step 4 of 9</div>
         <div className="step-title">Service types</div>
         <div className="step-desc">Service types appear on shift bars in the rota, on invoices, and in reports. The colours you choose here apply everywhere in CareFlow.</div>
       </div>

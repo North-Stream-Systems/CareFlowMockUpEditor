@@ -10,7 +10,7 @@ export const Step3 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 3 of 8</div>
+        <div className="step-num">Step 3 of 9</div>
         <div className="step-title">Service zones</div>
         <div className="step-desc">Zones group clients and staff geographically. Shifts, rounds, and compliance reports can all be filtered by zone. You can add or edit zones at any time.</div>
       </div>

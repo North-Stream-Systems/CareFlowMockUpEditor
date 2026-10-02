@@ -148,3 +148,21 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100
 .complete-card-ico{font-size:22px;margin-bottom:8px}
 .complete-card-val{font-family:var(--fh);font-size:20px;font-weight:800;color:var(--navy);margin-bottom:3px}
 .complete-card-label{font-size:12px;color:var(--slate)}
+
+/* ── STEP 8: CLIENT PROFILE TEMPLATES ── */
+.tpl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.tpl-card{text-align:left;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:12px;cursor:pointer;font-family:var(--fb);transition:all .15s}
+.tpl-card:hover{border-color:var(--teal)}
+.tpl-card.on{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-l)}
+.tpl-mini{background:var(--slate-l);border-radius:8px;padding:8px;margin-bottom:10px;min-height:150px}
+.tpl-alert{height:6px;border-radius:3px;margin-bottom:4px}
+.tpl-red{background:#FCA5A5}.tpl-amber{background:#FCD34D}.tpl-teal{background:#5EEAD4}
+.tpl-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:6px}
+.tpl-tile{background:#fff;border:1px solid var(--border);border-radius:4px;font-size:8.5px;color:var(--slate);padding:5px 4px;min-height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tpl-live{background:#F0F9FF;border-color:#BAE6FD}
+.tpl-name{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:6px}
+.tpl-tick{margin-left:auto;font-size:11px;color:var(--teal);font-weight:600;font-family:var(--fb)}
+.tpl-desc{font-size:12px;color:var(--slate);line-height:1.45;margin-top:4px}
+.tpl-count{font-size:11px;color:var(--teal);font-weight:600;margin-top:6px}
+.tpl-forms{display:flex;flex-wrap:wrap;gap:6px}
+.tpl-form{padding:5px 10px;border-radius:14px;background:#fff;border:1px solid var(--border);font-size:12.5px;color:var(--navy)}

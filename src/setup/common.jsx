@@ -19,7 +19,8 @@ export const STEPS = [
   { num:5, label:'Billing rate sheets',    sub:'Set up funder rate tables'           },
   { num:6, label:'Roles & permissions',    sub:'Who can do what'                     },
   { num:7, label:'Invite your team',        sub:'Add staff and coordinators'          },
-  { num:8, label:'Go live',               sub:'Review and activate'                  },
+  { num:8, label:'Client profiles',      sub:'Choose an overview layout'          },
+  { num:9, label:'Go live',               sub:'Review and activate'                  },
 ];
 
 export const SVC_COLORS_LIST = ['#0D9488','#F59E0B','#64748B','#8B5CF6','#3B82F6','#EC4899','#10B981','#DC2626'];

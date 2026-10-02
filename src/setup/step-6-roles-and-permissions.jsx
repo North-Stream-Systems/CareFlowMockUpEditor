@@ -16,7 +16,7 @@ export const Step6 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 6 of 8</div>
+        <div className="step-num">Step 6 of 9</div>
         <div className="step-title">Roles and permissions</div>
         <div className="step-desc">CareFlow uses role-based access control. Enable the roles you need — you can fine-tune individual permissions for each role in Settings later.</div>
       </div>

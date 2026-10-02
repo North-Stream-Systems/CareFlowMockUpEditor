@@ -13,7 +13,7 @@ export const Step7 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 7 of 8</div>
+        <div className="step-num">Step 7 of 9</div>
         <div className="step-title">Invite your team</div>
         <div className="step-desc">Add your team here or skip and do it later. Each person will receive an email with a secure link to set their own password. Care workers will be directed to the CareFlow mobile app.</div>
       </div>

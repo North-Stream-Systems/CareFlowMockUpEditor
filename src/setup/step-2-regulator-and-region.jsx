@@ -5,7 +5,7 @@ export const Step2 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 2 of 8</div>
+        <div className="step-num">Step 2 of 9</div>
         <div className="step-title">Regulator & service type</div>
         <div className="step-desc">CareFlow is built for both CQC and CIW. Select your regulator — this controls which inspection frameworks, notification workflows, and report templates are active.</div>
       </div>

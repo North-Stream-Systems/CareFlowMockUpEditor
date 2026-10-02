@@ -32,8 +32,22 @@ Inside each `src/<page>/`:
 - `mock-data.jsx` / `data.jsx` / `*-data.jsx` — hard-coded arrays. Edit these to change what's shown.
 - One file per screen/feature, named after it. Find things with `grep -rn "ComponentName" src/<page>`.
 
-Pages do **not** share code: each has its own copy of nav, helpers (`avCol`, `inits`), colours, etc.
+Pages mostly do **not** share code: each has its own copy of nav, helpers (`avCol`, `inits`), colours, etc.
 They have drifted slightly, so a change to e.g. the top nav must be made in each page that has it.
+The one exception is `src/shared/client-overview/` (logic only, no UI/CSS), used by Clients and Setup.
+
+## Client overview system (forms → widgets)
+
+Spec for the developer: `docs/client-overview.md`. Code map:
+- `src/shared/client-overview/` — `forms.js` (default forms, field types), `widgets.js` (widget types,
+  built-ins, starter templates), `rules.js` (alert operators, value formatting), `store.js` (org config in
+  localStorage `cf_client_overview_v1`, `useOverviewConfig()` hook).
+- `src/clients/form-submissions.jsx` — seeded mock entries per client + staff-added ones (`cf_client_submissions_v1`).
+- `src/clients/overview-widgets.jsx` — `OverviewGrid`, renders the layout (view mode on clients, edit mode in settings).
+- `src/clients/client-form-tabs.jsx` — client profile Overview + Forms tabs.
+- `src/clients/settings-overview.jsx` / `settings-forms.jsx` — Clients › Settings pages (`?page=settings-overview|settings-forms`).
+- `src/setup/step-8-client-profiles.jsx` — starter template picker in the Setup wizard.
+Stored config survives reloads; if a schema change breaks it, bump the localStorage key.
 
 ## Workflow — always verify
 

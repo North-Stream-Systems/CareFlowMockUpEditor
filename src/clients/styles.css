@@ -226,3 +226,116 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100
 /* TOGGLE */
 .toggle{width:36px;height:20px;border-radius:10px;cursor:pointer;position:relative;transition:background .2s;flex-shrink:0}
 .toggle-knob{position:absolute;top:3px;width:14px;height:14px;border-radius:7px;background:#fff;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+
+/* ── CLIENT OVERVIEW WIDGETS ── */
+.ov-hint{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--slate);margin-bottom:12px}
+.ov-link{background:none;border:none;color:var(--teal);font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;font-family:var(--fb);padding:0;white-space:nowrap}
+.ov-link:hover{text-decoration:underline}
+.ov-alerts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.ov-alert{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;font-size:12.5px;font-weight:600;border:1px solid}
+.ov-red{background:var(--red-l);color:var(--red);border-color:#FECACA}
+.ov-amber{background:var(--amber-l);color:#92400E;border-color:#FDE68A}
+.ov-teal{background:var(--teal-l);color:var(--teal);border-color:var(--teal-m)}
+.ov-off{opacity:.45;border-style:dashed}
+.ov-alert-ico{font-size:14px}
+.ov-alert-state{font-size:11px;font-weight:500;opacity:.8}
+.ov-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.ov-w{background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:var(--sh-sm);min-width:0}
+.ov-w-hd{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border)}
+.ov-w-title{font-family:var(--fh);font-size:13px;font-weight:600;color:var(--navy);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ov-w-body{padding:6px 14px 10px}
+.ov-w-body .drow{padding:7px 0;align-items:flex-start}
+.ov-w-body .dlabel{width:auto;flex:1;min-width:0}
+.ov-w-body .dval{text-align:right;max-width:62%}
+.ov-meta{font-size:11px;color:var(--slate);padding:4px 0}
+.ov-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.ov-tbl th{text-align:left;font-size:10.5px;color:var(--slate);font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding:6px 6px 6px 0}
+.ov-tbl td{padding:7px 6px 7px 0;border-top:1px solid var(--border)}
+.ov-empty{padding:28px;text-align:center;color:var(--slate);font-size:12.5px;background:#fff;border:1px dashed var(--border);border-radius:10px}
+.fv-empty{color:#94A3B8;font-size:12px;font-style:italic}
+/* edit mode */
+.ov-edit{cursor:pointer;transition:box-shadow .12s,border-color .12s}
+.ov-edit:hover{border-color:var(--teal)}
+.ov-sel{border-color:var(--teal);box-shadow:0 0 0 2px var(--teal-m)}
+.ov-drag{opacity:.4}
+.ov-grip{color:#94A3B8;cursor:grab;font-size:12px;letter-spacing:-2px}
+.ov-tools{display:flex;align-items:center;gap:2px}
+.ov-size{width:20px;height:20px;border-radius:4px;border:1px solid var(--border);background:#fff;font-size:10px;font-weight:700;color:var(--slate);cursor:pointer}
+.ov-size.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.ov-x{width:22px;height:22px;border-radius:5px;border:none;background:none;color:var(--slate);cursor:pointer;font-size:12px}
+.ov-x:hover{background:var(--red-l);color:var(--red)}
+
+/* ── INPUTS ── */
+.inp{width:100%;padding:7px 10px;border-radius:8px;border:1px solid var(--border);background:#fff;font-family:var(--fb);font-size:12.5px;color:var(--text);outline:none}
+.inp:focus{border-color:var(--teal)}
+textarea.inp{resize:vertical}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
+.seg-btn{padding:5px 11px;font-size:12px;font-family:var(--fb);border:none;background:none;color:var(--slate);cursor:pointer;border-right:1px solid var(--border)}
+.seg-btn:last-child{border-right:none}
+.seg-btn.on{background:var(--teal);color:#fff;font-weight:600}
+.chip{padding:4px 10px;border-radius:14px;border:1px solid var(--border);background:#fff;font-size:12px;font-family:var(--fb);color:var(--slate);cursor:pointer}
+.chip.on{background:var(--teal-l);border-color:var(--teal);color:var(--teal);font-weight:600}
+.fr{display:flex;flex-direction:column;gap:12px}
+.fr-row{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:start}
+.fr-label{font-size:12px;font-weight:600;color:var(--navy);padding-top:7px}
+
+/* ── CLIENT FORMS TAB ── */
+.cf-list{display:flex;flex-direction:column;gap:6px}
+.cf-item{display:flex;align-items:center;gap:12px;padding:11px 14px;background:#fff;border:1px solid var(--border);border-radius:10px;cursor:pointer;font-family:var(--fb);transition:border-color .12s}
+.cf-item:hover{border-color:var(--teal)}
+.cf-ico{font-size:18px;width:28px;text-align:center}
+.cf-name{display:block;font-size:13px;font-weight:600;color:var(--navy)}
+.cf-sub{display:block;font-size:11.5px;color:var(--slate);margin-top:1px}
+
+/* ── LAYOUT EDITOR ── */
+.le{display:grid;grid-template-columns:230px minmax(0,1fr) 280px;gap:16px;align-items:start}
+.le-side{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px;position:sticky;top:0}
+.le-h{font-size:10px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px}
+.le-add{display:flex;gap:10px;width:100%;text-align:left;padding:8px;border-radius:8px;border:1px solid transparent;background:none;cursor:pointer;font-family:var(--fb);margin-bottom:2px}
+.le-add:hover:not(:disabled){background:var(--teal-l);border-color:var(--teal-m)}
+.le-add:disabled{opacity:.45;cursor:default}
+.le-add-ico{font-size:16px;width:22px;text-align:center;flex-shrink:0}
+.le-add-name{display:block;font-size:12.5px;font-weight:600;color:var(--navy)}
+.le-add-desc{display:block;font-size:11px;color:var(--slate);line-height:1.35;margin-top:1px}
+.le-on{font-weight:500;color:var(--teal)}
+.le-canvas{background:var(--slate-l);border:1px solid var(--border);border-radius:10px;padding:14px;min-height:400px}
+.le-canvas-hd{font-size:11.5px;color:var(--slate);margin-bottom:10px}
+.le-canvas .ov-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.le-row{margin-bottom:12px}
+.le-label{font-size:11px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.le-checks{display:flex;flex-direction:column;gap:4px;max-height:220px;overflow-y:auto}
+.le-check{display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer}
+.le-steps{padding-left:18px;font-size:12.5px;line-height:1.55;color:var(--text);display:flex;flex-direction:column;gap:6px}
+.le-note{font-size:11.5px;color:var(--slate);line-height:1.45;margin-top:10px}
+.le-cfg .seg{display:flex;flex-wrap:wrap}
+.le-cfg .seg-btn{flex:1}
+
+/* ── FORM BUILDER ── */
+.fb{display:grid;grid-template-columns:260px minmax(0,1fr);gap:16px;align-items:start}
+.fb-list{background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px}
+.fb-item{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border-radius:8px;border:none;background:none;cursor:pointer;font-family:var(--fb)}
+.fb-item:hover{background:var(--slate-l)}
+.fb-item.on{background:var(--teal-l)}
+.fb-icon{font-size:20px;padding:6px}
+.fb-name{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--navy)}
+.fb-used{font-size:12px;color:var(--slate);margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
+.fb-fields{padding:4px 14px}
+.fb-fhead,.fb-frow{display:grid;grid-template-columns:34px minmax(0,1.6fr) 160px minmax(0,1.2fr) 64px 28px;gap:8px;align-items:center}
+.fb-fhead{font-size:10.5px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.4px;padding:8px 0}
+.fb-frow{padding:7px 0;border-top:1px solid var(--border)}
+.fb-move{display:flex;flex-direction:column}
+.fb-move button{border:none;background:none;color:var(--slate);font-size:9px;cursor:pointer;line-height:1.2}
+.fb-move button:disabled{opacity:.25;cursor:default}
+.fb-inuse{display:inline-block;font-size:10.5px;color:var(--teal);font-weight:600;margin-top:3px}
+.fb-lock{text-align:center;font-size:12px;opacity:.6}
+a.btn{text-decoration:none}
+/* Edit controls appear on hover/selection so titles stay readable */
+.ov-edit .ov-tools{display:none}
+.ov-edit:hover .ov-tools,.ov-sel .ov-tools{display:flex}
+/* Narrow widgets stack label above value */
+.ov-w{container-type:inline-size}
+@container (max-width:260px){
+  .ov-w-body .drow{flex-direction:column;gap:2px}
+  .ov-w-body .dval{text-align:left;max-width:none}
+  .ov-w-body .dval span{justify-content:flex-start!important}
+}

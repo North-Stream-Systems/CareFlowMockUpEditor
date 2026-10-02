@@ -7,7 +7,8 @@ import { Step4 } from './step-4-service-types.jsx';
 import { Step5 } from './step-5-billing-rate-sheets.jsx';
 import { Step6 } from './step-6-roles-and-permissions.jsx';
 import { Step7 } from './step-7-invite-team.jsx';
-import { Step8 } from './step-8-go-live.jsx';
+import { Step8 } from './step-8-client-profiles.jsx';
+import { Step9 } from './step-9-go-live.jsx';
 import { CompleteScreen } from './complete-screen.jsx';
 
 // ── APP ───────────────────────────────────────────────────────────────────────
@@ -19,7 +20,7 @@ export const App = () => {
   const setStepData = d => setAllData(prev => ({...prev, [step]:d}));
   const data = allData[step] || {};
 
-  const goNext = () => { if(step < 8) setStep(s => s+1); };
+  const goNext = () => { if(step < STEPS.length) setStep(s => s+1); };
   const goPrev = () => { if(step > 1) setStep(s => s-1); };
 
   const STEP_COMPONENTS = {
@@ -30,10 +31,11 @@ export const App = () => {
     5: <Step5 data={data} setData={setStepData}/>,
     6: <Step6 data={data} setData={setStepData}/>,
     7: <Step7 data={data} setData={setStepData}/>,
-    8: <Step8 data={data} allData={allData} onComplete={()=>setComplete(true)}/>,
+    8: <Step8 data={data} setData={setStepData}/>,
+    9: <Step9 data={data} allData={allData} onComplete={()=>setComplete(true)}/>,
   };
 
-  const pct = Math.round((step/8)*100);
+  const pct = Math.round((step/STEPS.length)*100);
 
   if(complete) return (
     <div className="setup-layout">
@@ -100,7 +102,7 @@ export const App = () => {
       {/* Main */}
       <div className="setup-main">
         <div className="setup-topbar">
-          <span className="topbar-step">Step <strong>{step}</strong> of 8 — <strong>{STEPS[step-1].label}</strong></span>
+          <span className="topbar-step">Step <strong>{step}</strong> of {STEPS.length} — <strong>{STEPS[step-1].label}</strong></span>
           <div className="topbar-actions">
             <button className="btn btn-g" style={{fontSize:13,padding:'7px 14px'}} onClick={()=>window.location.href='CareFlow_Login.html'}>← Back to sign in</button>
           </div>
@@ -123,7 +125,7 @@ export const App = () => {
                 onClick={()=>s.num<=step&&setStep(s.num)}/>
             ))}
           </div>
-          {step < 8
+          {step < STEPS.length
             ? <button className="btn btn-p" onClick={goNext}>Next →</button>
             : <button className="btn btn-navy" onClick={()=>setComplete(true)}>Activate →</button>
           }

@@ -2,7 +2,7 @@
 export const Step1 = ({data, setData}) => (
   <div>
     <div className="step-header">
-      <div className="step-num">Step 1 of 8</div>
+      <div className="step-num">Step 1 of 9</div>
       <div className="step-title">Organisation details</div>
       <div className="step-desc">Tell us about your care organisation. This information will appear on invoices, reports, and all regulatory documentation.</div>
     </div>

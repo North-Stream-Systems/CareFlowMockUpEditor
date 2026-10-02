@@ -16,7 +16,7 @@ export const Step5 = ({data, setData}) => {
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 5 of 8</div>
+        <div className="step-num">Step 5 of 9</div>
         <div className="step-title">Billing rate sheets</div>
         <div className="step-desc">Rate sheets define what you charge per service type, day of week, and time of day. Each client is assigned a rate sheet — change the sheet once and all invoices update automatically.</div>
       </div>

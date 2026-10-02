@@ -5,6 +5,8 @@ import { ClientList } from './client-list.jsx';
 import { ReferralsPage } from './referrals-page.jsx';
 import { IncidentsPage } from './incidents-page.jsx';
 import { ComplaintsPage } from './complaints-page.jsx';
+import { OverviewSettingsPage } from './settings-overview.jsx';
+import { FormsSettingsPage } from './settings-forms.jsx';
 import { BodyMapsPage, DischargedPage, MCAPage, MedicationsPage, SuspendedPage } from './simple-cs-pages.jsx';
 
 // ── APP ───────────────────────────────────────────────────────────────────────
@@ -24,6 +26,8 @@ export const App = () => {
     medications:<MedicationsPage/>,
     'body-maps':<BodyMapsPage/>,
     mca:        <MCAPage/>,
+    'settings-overview': <OverviewSettingsPage/>,
+    'settings-forms':    <FormsSettingsPage/>,
   };
 
   return (

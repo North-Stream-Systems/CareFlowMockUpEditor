@@ -13,6 +13,10 @@ const SB_ITEMS = [
     { id:'body-maps',  ico:'🫀', label:'Body Maps'                                    },
     { id:'mca',        ico:'⚖️', label:'Mental Capacity'                              },
   ]},
+  { label:'Settings', items:[
+    { id:'settings-overview', ico:'🧩', label:'Client overview'                    },
+    { id:'settings-forms',    ico:'📝', label:'Forms'                              },
+  ]},
 ];
 
 export const Sidebar = ({ active, setActive }) => (

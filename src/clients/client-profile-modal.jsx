@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { avCol, inits } from './helpers.jsx';
 import { INCIDENTS_DATA } from './mock-data.jsx';
-import { TabBodyMaps, TabCarePlan, TabDashboard, TabDetails, TabIncidents, TabMAR, TabNotes } from './profile-tabs.jsx';
+import { TabBodyMaps, TabCarePlan, TabDetails, TabIncidents, TabMAR, TabNotes } from './profile-tabs.jsx';
+import { TabForms, TabOverview } from './client-form-tabs.jsx';
 import { CS, TabDocuments } from './qr-code-generator.jsx';
 
 // ── CLIENT PROFILE MODAL ──────────────────────────────────────────────────────
 const PROFILE_TABS = [
-  {id:'dashboard',  label:'Dashboard'},
+  {id:'overview',   label:'Overview'},
+  {id:'forms',      label:'Forms'},
   {id:'details',    label:'Client Details'},
   {id:'tasks',      label:'Tasks'},
   {id:'notes',      label:'Notes'},
@@ -22,7 +24,9 @@ const PROFILE_TABS = [
 ];
 
 export const ClientProfile = ({ client, onClose }) => {
-  const [tab, setTab] = useState('dashboard');
+  const [tab, setTab] = useState('overview');
+  const [formId, setFormId] = useState(null);
+  const openForm = id => { setFormId(id); setTab('forms'); };
   const color = avCol(client.name);
   const stCls = {active:'sp-active',suspended:'sp-suspended',discharged:'sp-discharged'}[client.status]||'sp-active';
   const alerts = INCIDENTS_DATA.filter(i=>i.clientId===client.id&&i.stage!=='Closed').length;
@@ -53,12 +57,13 @@ export const ClientProfile = ({ client, onClose }) => {
           </div>
           <div className="prof-tabs">
             {PROFILE_TABS.map(t=>(
-              <button key={t.id} className={`ptab${tab===t.id?' on':''}`} onClick={()=>setTab(t.id)}>{t.label}</button>
+              <button key={t.id} className={`ptab${tab===t.id?' on':''}`} onClick={()=>{ setTab(t.id); if(t.id==='forms') setFormId(null); }}>{t.label}</button>
             ))}
           </div>
         </div>
         <div className="prof-body">
-          {tab==='dashboard'  && <TabDashboard  c={client}/>}
+          {tab==='overview'   && <TabOverview   c={client} onOpenForm={openForm}/>}
+          {tab==='forms'      && <TabForms      c={client} formId={formId} setFormId={setFormId}/>}
           {tab==='details'    && <TabDetails    c={client}/>}
           {tab==='tasks'      && <TabNotes      c={client}/>}
           {tab==='notes'      && <TabNotes      c={client}/>}

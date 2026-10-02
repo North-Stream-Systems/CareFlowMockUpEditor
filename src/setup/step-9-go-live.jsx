@@ -1,5 +1,5 @@
-// ── STEP 8: Go live ──────────────────────────────────────────────────────────
-export const Step8 = ({data, allData, onComplete}) => {
+// ── STEP 9: Go live ──────────────────────────────────────────────────────────
+export const Step9 = ({data, allData, onComplete}) => {
   const checks = [
     { label:'Organisation details',  done: !!(allData[1]?.name),       step:1 },
     { label:'Regulator configured',  done: !!(allData[2]?.reg),        step:2 },
@@ -8,13 +8,14 @@ export const Step8 = ({data, allData, onComplete}) => {
     { label:'Rate sheets configured',done: !!(allData[5]?.funders?.length>0),   step:5 },
     { label:'Roles enabled',         done: true,                        step:6 },
     { label:'Team invited',          done: !!(allData[7]?.invites?.some(s=>s.email)), step:7 },
+    { label:'Client profile layout chosen', done: !!(allData[8]?.template), step:8 },
   ];
   const readyCount = checks.filter(c=>c.done).length;
   const allReady   = readyCount === checks.length;
   return (
     <div>
       <div className="step-header">
-        <div className="step-num">Step 8 of 8</div>
+        <div className="step-num">Step 9 of 9</div>
         <div className="step-title">Ready to go live</div>
         <div className="step-desc">Review your setup checklist. You can go live now and complete missing items later — or finish everything here for the best first-day experience.</div>
       </div>
